@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Request, HTTPException
 from pydantic import BaseModel
 import os
-import requests
+import httpx
 from typing import Optional
 
 router = APIRouter()
@@ -31,7 +31,8 @@ async def chatkit_session():
     try:
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
         # Replace with the real ChatKit Sessions URL when available
-        resp = requests.post("https://api.openai.com/v1/chat/sessions", headers=headers, json={})
+            async with httpx.AsyncClient() as client:
+            resp = await client.post("https://api.openai.com/v1/chat/sessions", headers=headers, json={})
         resp.raise_for_status()
         return resp.json()
     except Exception as e:
@@ -66,7 +67,8 @@ async def query_endpoint(body: QueryRequest):
     except Exception as e:
         # fallback: call REST embedding
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
-        r = requests.post("https://api.openai.com/v1/embeddings", headers=headers, json={"model":"text-embedding-3-small","input": body.query})
+        async with httpx.AsyncClient() as client:
+            r = await client.post("https://api.openai.com/v1/embeddings", headers=headers, json={"model":"text-embedding-3-small","input": body.query})
         r.raise_for_status()
         query_vector = r.json()["data"][0]["embedding"]
 
@@ -76,7 +78,8 @@ async def query_endpoint(body: QueryRequest):
         qdrant_search_url = QDRANT_URL.rstrip('/') + f"/collections/{QDRANT_COLLECTION}/points/search"
         headers = {"api-key": QDRANT_API_KEY, "Content-Type": "application/json"} if QDRANT_API_KEY else {"Content-Type": "application/json"}
         payload = {"vector": query_vector, "limit": body.top_k}  # Use 'limit' not 'top'
-        r = requests.post(qdrant_search_url, headers=headers, json=payload)
+        async with httpx.AsyncClient() as client:
+            r = await client.post(qdrant_search_url, headers=headers, json=payload)
         r.raise_for_status()
         result = r.json()
         hits = result.get("result", [])
@@ -93,7 +96,8 @@ async def query_endpoint(body: QueryRequest):
         prompt = f"Use the following context to answer the question:\n\n{context_text}\n\nQuestion: {body.query}\nAnswer:"
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
         payload = {"model": MODEL_NAME, "messages": [{"role":"user","content": prompt}]}
-        resp = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+        async with httpx.AsyncClient() as client:
+            resp = await client.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
         resp.raise_for_status()
         return resp.json()
     except Exception as e:

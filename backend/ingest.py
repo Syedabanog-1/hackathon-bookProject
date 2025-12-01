@@ -2,7 +2,9 @@
 import os, glob, json, math
 from pathlib import Path
 from typing import List
+import httpx
 from dotenv import load_dotenv
+import asyncio
 
 # Load environment variables from parent directory
 load_dotenv('../.env')
@@ -46,21 +48,20 @@ def chunk_text(text, max_tokens=500):
         chunks.append(cur)
     return chunks
 
-def embed_texts(texts: List[str]):
+async def embed_texts(texts: List[str]):
     # use REST OpenAI embeddings
-    import requests
     if not OPENAI_API_KEY:
         raise RuntimeError('OPENAI_API_KEY not set')
     url = 'https://api.openai.com/v1/embeddings'
     headers = {'Authorization': f'Bearer {OPENAI_API_KEY}', 'Content-Type': 'application/json'}
     payload = {'model':'text-embedding-3-small','input': texts}
-    r = requests.post(url, headers=headers, json=payload)
+    async with httpx.AsyncClient() as client:
+        r = await client.post(url, headers=headers, json=payload)
     r.raise_for_status()
     data = r.json()
     return [d['embedding'] for d in data['data']]
 
-def upsert_to_qdrant(points):
-    import requests
+async def upsert_to_qdrant(points):
     if not QDRANT_URL:
         raise RuntimeError('QDRANT_URL not set')
     url = QDRANT_URL.rstrip('/') + f"/collections/{COLLECTION}/points?wait=true"
@@ -69,7 +70,8 @@ def upsert_to_qdrant(points):
         headers['api-key'] = QDRANT_API_KEY
     payload = {'points': points}
     try:
-        r = requests.put(url, headers=headers, json=payload)
+        async with httpx.AsyncClient() as client:
+            r = await client.put(url, headers=headers, json=payload)
         r.raise_for_status()
         return r.json()
     except Exception as e:
@@ -78,26 +80,26 @@ def upsert_to_qdrant(points):
             print(f"Response: {e.response.text}")
         raise
 
-def create_collection_if_not_exists():
+async def create_collection_if_not_exists():
     """Create Qdrant collection if it doesn't exist."""
-    import requests
     if not QDRANT_URL:
         raise RuntimeError('QDRANT_URL not set')
-    
+
     # Check if collection exists
     url = QDRANT_URL.rstrip('/') + f"/collections/{COLLECTION}"
     headers = {'Content-Type': 'application/json'}
     if QDRANT_API_KEY:
         headers['api-key'] = QDRANT_API_KEY
-    
+
     try:
-        r = requests.get(url, headers=headers)
+        async with httpx.AsyncClient() as client:
+            r = await client.get(url, headers=headers)
         if r.status_code == 200:
             print(f"✓ Collection '{COLLECTION}' already exists")
             return
     except Exception as e:
         print(f"Collection check failed: {e}")
-    
+
     # Create collection with text-embedding-3-small dimensions (1536)
     create_url = QDRANT_URL.rstrip('/') + f"/collections/{COLLECTION}"
     payload = {
@@ -107,13 +109,14 @@ def create_collection_if_not_exists():
         }
     }
     try:
-        r = requests.put(create_url, headers=headers, json=payload)
+        async with httpx.AsyncClient() as client:
+            r = await client.put(create_url, headers=headers, json=payload)
         r.raise_for_status()
         print(f"✓ Created collection '{COLLECTION}'")
     except Exception as e:
         print(f"Warning: Could not create collection: {e}")
 
-def main():
+async def main():
     # Validate environment variables
     print("=" * 60)
     print("QDRANT INGESTION SCRIPT")
@@ -130,7 +133,7 @@ def main():
     print()
     
     # Create collection if needed
-    create_collection_if_not_exists()
+    await create_collection_if_not_exists()
     print()
     
     # Read and process documents
@@ -156,7 +159,7 @@ def main():
     print(f"\n📊 Total chunks: {len(texts)}")
     print(f"Creating embeddings...")
     
-    embeddings = embed_texts(texts)
+    embeddings = await embed_texts(texts)
     print(f"✓ Created {len(embeddings)} embeddings")
     
     points = []
@@ -172,11 +175,11 @@ def main():
         })
     
     print(f"\n📤 Upserting {len(points)} points to Qdrant...")
-    res = upsert_to_qdrant(points)
+    res = await upsert_to_qdrant(points)
     print(f"✅ SUCCESS! Upsert result: {res}")
     print(f"\n{'=' * 60}")
     print(f"Chatbot is now ready to answer questions!")
     print(f"{'=' * 60}")
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())

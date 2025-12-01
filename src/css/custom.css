@@ -189,3 +189,13 @@ footer.footer .container {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+::selection {
+  background-color: darkblue; /* Dark blue background for selected text */
+  color: white; /* White text for better visibility */
+}
+
+::-moz-selection {
+  background-color: darkblue; /* Firefox-specific dark blue background */
+  color: white; /* Firefox-specific white text */
+}
