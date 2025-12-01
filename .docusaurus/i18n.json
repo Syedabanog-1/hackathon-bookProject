@@ -14,8 +14,8 @@
       "calendar": "gregory",
       "path": "en",
       "translate": false,
-      "url": "https://full-project-kappa.vercel.app",
-      "baseUrl": "/"
+      "url": "https://Syedabanog-1.github.io",
+      "baseUrl": "/hackathon-bookProject/"
     },
     "ur": {
       "label": "اردو",
@@ -24,8 +24,8 @@
       "calendar": "gregory",
       "path": "ur",
       "translate": true,
-      "url": "https://full-project-kappa.vercel.app",
-      "baseUrl": "/ur/"
+      "url": "https://Syedabanog-1.github.io",
+      "baseUrl": "/hackathon-bookProject/ur/"
     }
   }
 }

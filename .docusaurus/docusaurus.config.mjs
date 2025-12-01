@@ -34,8 +34,8 @@ export default {
       "async": true
     }
   ],
-  "url": "https://full-project-kappa.vercel.app",
-  "baseUrl": "/",
+  "url": "https://Syedabanog-1.github.io",
+  "baseUrl": "/hackathon-bookProject/",
   "organizationName": "Syedabanog-1",
   "projectName": "hackathon-bookProject",
   "onBrokenLinks": "warn",
