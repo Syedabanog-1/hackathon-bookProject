@@ -22,7 +22,7 @@ export default function ChatKitPanel({ selectedText, onThreadChange, onResponseC
     {
       id: 'welcome',
       role: 'assistant',
-      content: 'Hello! I am your AI assistant for Physical AI & Humanoid Robotics. How can I help you today?',
+      content: 'Hello! I am your AI assistant for Physical AI & Humanoid Robotics. For your assistance!',
       timestamp: Date.now()
     }
   ]);

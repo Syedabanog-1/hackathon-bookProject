@@ -21,7 +21,7 @@ const LoginPage: React.FC = () => {
       setError(null);
       await authService.login(formData);
       // Redirect to home page after successful login
-      window.location.href = '/';
+      window.open('/', '_blank');
     } catch (err: any) {
       setError(err.message || 'Login failed. Please check your credentials.');
     } finally {
@@ -91,9 +91,9 @@ const LoginPage: React.FC = () => {
             <h1 style={{
               fontSize: '32px',
               fontWeight: '800',
-              background: 'linear-gradient(135deg, #dc2626 0%, #f87171 100%)',
+              background: 'linear-gradient(135deg, #FFC0CB 0%, #F08080 100%)',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              WebkitTextFillColor: '#FFC0CB',
               marginBottom: '12px',
               letterSpacing: '-0.5px'
             }}>
@@ -214,8 +214,8 @@ const LoginPage: React.FC = () => {
                 width: '100%',
                 padding: '16px',
                 background: isLoading
-                  ? 'linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%)'
-                  : 'linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%)',
+                  ? 'linear-gradient(135deg, #FFC0CB 0%, #F08080 100%)'
+                  : 'linear-gradient(135deg, #FFC0CB 0%, #F08080 50%, #E06070 100%)',
                 border: 'none',
                 borderRadius: '12px',
                 color: '#ffffff',
@@ -234,12 +234,12 @@ const LoginPage: React.FC = () => {
               onMouseEnter={(e) => {
                 if (!isLoading) {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(220, 38, 38, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 192, 203, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 10px 30px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(255, 192, 203, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
               }}
             >
               {isLoading ? (
@@ -284,13 +284,13 @@ const LoginPage: React.FC = () => {
             <a
               href="/signup"
               style={{
-                color: '#dc2626',
+                color: '#FFC0CB',
                 textDecoration: 'none',
                 fontWeight: '600',
                 transition: 'color 0.2s ease'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#f87171'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#dc2626'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#F08080'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#FFC0CB'}
             >
               Sign Up
             </a>

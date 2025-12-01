@@ -48,10 +48,9 @@ async def query_endpoint(body: QueryRequest):
         # Call LLM via OpenAI completion
         if not OPENAI_API_KEY:
             raise HTTPException(status_code=500, detail="OPENAI_API_KEY not configured")
-        from requests import post
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
         payload = {"model": MODEL_NAME, "messages": [{"role":"user","content": prompt}]}
-        resp = post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+        resp = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
         resp.raise_for_status()
         return resp.json()
 
@@ -73,21 +72,24 @@ async def query_endpoint(body: QueryRequest):
         query_vector = r.json()["data"][0]["embedding"]
 
     # Query Qdrant
+    # Query Qdrant
     try:
         qdrant_search_url = QDRANT_URL.rstrip('/') + f"/collections/{QDRANT_COLLECTION}/points/search"
         headers = {"api-key": QDRANT_API_KEY, "Content-Type": "application/json"} if QDRANT_API_KEY else {"Content-Type": "application/json"}
-        payload = {"vector": query_vector, "top": body.top_k}
+        payload = {"vector": query_vector, "limit": body.top_k}  # Use 'limit' not 'top'
         r = requests.post(qdrant_search_url, headers=headers, json=payload)
         r.raise_for_status()
-        hits = r.json().get("result") or r.json().get("hits") or r.json()
-        # assemble context
+        result = r.json()
+        hits = result.get("result", [])
+        
+        # Assemble context from search results
         contexts = []
-        for h in hits[: body.top_k]:
-            # Qdrant may return payload or payload['payload'] depending on version
-            txt = h.get('payload') or h.get('payload', {})
-            if isinstance(txt, dict):
-                txt = txt.get('text') or str(txt)
-            contexts.append(str(txt))
+        for h in hits[:body.top_k]:
+            payload_data = h.get('payload', {})
+            txt = payload_data.get('text', '')
+            if txt:
+                contexts.append(txt)
+        
         context_text = "\n\n".join(contexts)
         prompt = f"Use the following context to answer the question:\n\n{context_text}\n\nQuestion: {body.query}\nAnswer:"
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}

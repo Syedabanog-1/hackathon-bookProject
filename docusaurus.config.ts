@@ -23,8 +23,8 @@ const config: Config = {
   url: 'https://full-project-kappa.vercel.app', // Your Vercel URL
   baseUrl: '/', // Base URL for Vercel (root)
 
-  organizationName: 'samade747', // Your GitHub username
-  projectName: 'full-project', // Your repository name
+  organizationName: 'Syedabanog-1', // Your GitHub username
+  projectName: 'hackathon-bookProject', // Your repository name
 
   onBrokenLinks: 'warn',
 

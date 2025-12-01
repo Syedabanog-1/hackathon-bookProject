@@ -35,9 +35,9 @@ export default {
     }
   ],
   "url": "https://full-project-kappa.vercel.app",
-  "baseUrl": "/ur/",
-  "organizationName": "samade747",
-  "projectName": "full-project",
+  "baseUrl": "/",
+  "organizationName": "Syedabanog-1",
+  "projectName": "hackathon-bookProject",
   "onBrokenLinks": "warn",
   "i18n": {
     "defaultLocale": "en",
@@ -49,11 +49,9 @@ export default {
     "localeConfigs": {}
   },
   "clientModules": [
-    "D:\\github\\full-project\\src\\components\\Root.tsx"
+    "D:\\syeda Gulzar Bano\\hackathon-book-project\\src\\components\\Root.tsx"
   ],
-  "customFields": {
-    "geminiApiKey": "AIzaSyBppTVB6o9AI7buzuOCg0Rqzbb7gr6ioAA"
-  },
+  "customFields": {},
   "presets": [
     [
       "classic",
@@ -65,8 +63,8 @@ export default {
         "blog": false,
         "theme": {
           "customCss": [
-            "D:\\github\\full-project\\src\\css\\custom.css",
-            "D:\\github\\full-project\\src\\css\\sidebar-custom.css"
+            "D:\\syeda Gulzar Bano\\hackathon-book-project\\src\\css\\custom.css",
+            "D:\\syeda Gulzar Bano\\hackathon-book-project\\src\\css\\sidebar-custom.css"
           ]
         }
       }
