@@ -3,26 +3,26 @@
  */
 
 :root {
-  --ifm-color-primary: #6366f1;
+  --ifm-color-primary: #3CB371;
   /* Vibrant Indigo for primary actions */
-  --ifm-color-primary-dark: #4f46e5;
-  --ifm-color-primary-darker: #4338ca;
-  --ifm-color-primary-darkest: #3730a3;
-  --ifm-color-primary-light: #818cf8;
-  --ifm-color-primary-lighter: #a5b4fc;
-  --ifm-color-primary-lightest: #c7d2fe;
+  --ifm-color-primary-dark: #2E8B57;
+  --ifm-color-primary-darker: #228B22;
+  --ifm-color-primary-darkest: #006400;
+  --ifm-color-primary-light: #66CDAA;
+  --ifm-color-primary-lighter: #90EE90;
+  --ifm-color-primary-lightest: #C1FFC1;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.2);
   /* Faint indigo for code highlights */
 }
 
-/* Modern dark theme with deep blue-purple background */
+/* Modern dark theme with deep green-gray background */
 html[data-theme='dark'],
 html[data-theme='light'] {
   --ifm-background-color: #0f172a;
-  /* Deep slate blue */
+  /* Deep slate green */
   --ifm-font-color-base: #f1f5f9;
-  --ifm-color-primary: #818cf8;
+  --ifm-color-primary: #98FB98;
   /* Lighter indigo for dark mode */
   --ifm-color-primary-dark: #6366f1;
   --ifm-color-primary-darker: #4f46e5;
