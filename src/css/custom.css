@@ -1,0 +1,191 @@
+/**
+ * Any CSS placed here will be global and applied to the entire site.
+ */
+
+:root {
+  --ifm-color-primary: #6366f1;
+  /* Vibrant Indigo for primary actions */
+  --ifm-color-primary-dark: #4f46e5;
+  --ifm-color-primary-darker: #4338ca;
+  --ifm-color-primary-darkest: #3730a3;
+  --ifm-color-primary-light: #818cf8;
+  --ifm-color-primary-lighter: #a5b4fc;
+  --ifm-color-primary-lightest: #c7d2fe;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.2);
+  /* Faint indigo for code highlights */
+}
+
+/* Modern dark theme with deep blue-purple background */
+html[data-theme='dark'],
+html[data-theme='light'] {
+  --ifm-background-color: #0f172a;
+  /* Deep slate blue */
+  --ifm-font-color-base: #f1f5f9;
+  --ifm-color-primary: #818cf8;
+  /* Lighter indigo for dark mode */
+  --ifm-color-primary-dark: #6366f1;
+  --ifm-color-primary-darker: #4f46e5;
+  --ifm-color-primary-darkest: #4338ca;
+  --ifm-color-primary-light: #a5b4fc;
+  --ifm-color-primary-lighter: #c7d2fe;
+  --ifm-color-primary-lightest: #e0e7ff;
+  --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.3);
+}
+
+/* Headings styled with theme color */
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4,
+.theme-doc-markdown h5,
+.theme-doc-markdown h6 {
+  color: var(--ifm-color-primary);
+}
+
+
+/* Styling for Auth Components */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--card-background-color);
+  border-radius: var(--ifm-border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form select {
+  padding: 10px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 5px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+form button[type="submit"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+/* AuthButton Styling */
+.navbar-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.AuthButton-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.AuthButton-container a,
+.AuthButton-container button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.AuthButton-container a {
+  background-color: transparent;
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.AuthButton-container a:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.AuthButton-container button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.AuthButton-container button:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+/* PersonalizeButton and EditPageButton Styling */
+.ContentWrapper-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ContentWrapper-buttons button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background-color: var(--card-background-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ContentWrapper-buttons button:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+/* ===== FOOTER - Modern Blue Theme ===== */
+
+/* Light mode footer */
+[data-theme='light'] footer.footer--dark {
+  --ifm-footer-background-color: #f8fafc !important;
+  background-color: #f8fafc !important;
+  border-top: 1px solid #e2e8f0;
+}
+
+[data-theme='light'] footer.footer--dark .footer__copyright,
+[data-theme='light'] footer.footer--dark .footer__link-item {
+  color: #475569 !important;
+}
+
+/* Dark mode footer - Deep blue matching theme */
+[data-theme='dark'] footer.footer--dark {
+  --ifm-footer-background-color: #1e293b !important;
+  background-color: #1e293b !important;
+  border-top: 1px solid #334155;
+}
+
+[data-theme='dark'] footer.footer--dark .footer__title {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+[data-theme='dark'] footer.footer--dark .footer__copyright,
+[data-theme='dark'] footer.footer--dark .footer__link-item {
+  color: #94a3b8 !important;
+}
+
+[data-theme='dark'] footer.footer--dark .footer__link-item:hover {
+  color: #818cf8 !important;
+}
+
+/* Footer padding adjustment */
+footer.footer {
+  padding: 2rem 0 !important;
+}
+
+footer.footer .container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
