@@ -136,8 +136,8 @@ export default function ChatKitPanel({ selectedText, onThreadChange, onResponseC
               color: msg.role === 'user'
                 ? '#fff'
                 : msg.role === 'system'
-                  ? 'var(--ifm-color-danger)'
-                  : 'var(--ifm-font-color-base)',
+                  ? '#000'
+                  : '#000',
               borderBottomRightRadius: msg.role === 'user' ? '2px' : '12px',
               borderBottomLeftRadius: msg.role === 'assistant' ? '2px' : '12px',
             }}
@@ -151,7 +151,8 @@ export default function ChatKitPanel({ selectedText, onThreadChange, onResponseC
             backgroundColor: 'var(--ifm-color-emphasis-200)',
             padding: '10px 14px',
             borderRadius: '12px',
-            borderBottomLeftRadius: '2px'
+            borderBottomLeftRadius: '2px',
+            color: '#000'
           }}>
             <div className="typing-indicator">Thinking...</div>
           </div>

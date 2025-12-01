@@ -10,7 +10,7 @@ router = APIRouter()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
-QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION_NAME", "calcu_book")
+QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION_NAME", "physical_ai_book")
 MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4o-mini")
 
 class QueryRequest(BaseModel):
@@ -65,7 +65,6 @@ async def query_endpoint(body: QueryRequest):
         query_vector = emb_resp.data[0].embedding
     except Exception as e:
         # fallback: call REST embedding
-        import requests
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
         r = requests.post("https://api.openai.com/v1/embeddings", headers=headers, json={"model":"text-embedding-3-small","input": body.query})
         r.raise_for_status()
