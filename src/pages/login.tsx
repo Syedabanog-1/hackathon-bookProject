@@ -13,15 +13,20 @@ const LoginPage: React.FC = () => {
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       setIsLoading(true);
       setError(null);
+      setSuccess(false);
       await authService.login(formData);
+      setSuccess(true);
       // Redirect to home page after successful login
-      window.open('/', '_blank');
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1500);
     } catch (err: any) {
       setError(err.message || 'Login failed. Please check your credentials.');
     } finally {
@@ -109,6 +114,28 @@ const LoginPage: React.FC = () => {
           </div>
 
           <form onSubmit={handleSubmit}>
+            {success && (
+              <div style={{
+                padding: '14px 18px',
+                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                border: '2px solid #10b981',
+                borderRadius: '12px',
+                color: '#10b981',
+                marginBottom: '24px',
+                fontSize: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                backdropFilter: 'blur(10px)',
+                animation: 'slideIn 0.3s ease',
+                fontWeight: '600'
+              }}>
+                <span style={{ fontSize: '24px' }}>✅</span>
+                <span>Logged In</span>
+              </div>
+            )}
+
             {error && (
               <div style={{
                 padding: '14px 18px',
