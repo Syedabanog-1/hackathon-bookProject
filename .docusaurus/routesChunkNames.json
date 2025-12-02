@@ -2,64 +2,64 @@
   "/hackathon-bookProject/__docusaurus/debug-dd8": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     }
   },
   "/hackathon-bookProject/__docusaurus/debug/config-a17": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     }
   },
   "/hackathon-bookProject/__docusaurus/debug/content-821": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     },
     "__props": "__props---hackathon-book-project-docusaurus-debug-contentf-0-f-b5a"
   },
   "/hackathon-bookProject/__docusaurus/debug/globalData-004": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     }
   },
   "/hackathon-bookProject/__docusaurus/debug/metadata-bcb": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     }
   },
   "/hackathon-bookProject/__docusaurus/debug/registry-4f3": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     }
   },
   "/hackathon-bookProject/__docusaurus/debug/routes-cfb": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---hackathon-book-project-docusaurus-debugb-38-27b"
     }
   },
   "/hackathon-bookProject/login-31d": {
     "__comp": "__comp---site-src-pages-login-tsx-34-b-c7d",
     "__context": {
-      "plugin": "plugin---logina-74-fc3"
+      "plugin": "plugin---hackathon-book-project-logina-74-27d"
     },
-    "config": "config---login-5-e-9-d49"
+    "config": "config---hackathon-book-project-login-5-e-9-b9c"
   },
   "/hackathon-bookProject/signup-a4d": {
     "__comp": "__comp---site-src-pages-signup-tsx-8-d-9-369",
     "__context": {
-      "plugin": "plugin---logina-74-fc3"
+      "plugin": "plugin---hackathon-book-project-logina-74-27d"
     },
-    "config": "config---login-5-e-9-d49"
+    "config": "config---hackathon-book-project-login-5-e-9-b9c"
   },
   "/hackathon-bookProject/docs-3f5": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---docsaba-d7c"
+      "plugin": "plugin---hackathon-book-project-docsaba-07b"
     }
   },
   "/hackathon-bookProject/docs-222": {
@@ -95,157 +95,157 @@
   },
   "/hackathon-bookProject/docs/hardware/-635": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-754-439"
+    "content": "content---hackathon-book-project-docs-hardware-754-6f6"
   },
   "/hackathon-bookProject/docs/hardware/conclusion/-33d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-conclusion-a-43-18b"
+    "content": "content---hackathon-book-project-docs-hardware-conclusion-a-43-4af"
   },
   "/hackathon-bookProject/docs/hardware/edge-computing-jetson-2e6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-edge-computing-jetsona-7-b-249"
+    "content": "content---hackathon-book-project-docs-hardware-edge-computing-jetsona-7-b-1a6"
   },
   "/hackathon-bookProject/docs/hardware/introduction/-615": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-introduction-2-b-8-d29"
+    "content": "content---hackathon-book-project-docs-hardware-introduction-2-b-8-ea6"
   },
   "/hackathon-bookProject/docs/hardware/lab-infrastructure-005": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-lab-infrastructurea-3-c-48a"
+    "content": "content---hackathon-book-project-docs-hardware-lab-infrastructurea-3-c-252"
   },
   "/hackathon-bookProject/docs/hardware/sensors-actuators-b8a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-sensors-actuatorsfd-6-709"
+    "content": "content---hackathon-book-project-docs-hardware-sensors-actuatorsfd-6-b0b"
   },
   "/hackathon-bookProject/docs/hardware/workstation-requirements-ac2": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hardware-workstation-requirementsa-11-267"
+    "content": "content---hackathon-book-project-docs-hardware-workstation-requirementsa-11-854"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/-5ad": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-c-7-c-338"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-c-7-c-7ec"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/bipedal-locomotion-5a7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-bipedal-locomotiona-82-93b"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-bipedal-locomotiona-82-b15"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/conclusion/-72d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-conclusion-095-961"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-conclusion-095-e4c"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/human-robot-interaction-677": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-human-robot-interaction-23-e-8c9"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-human-robot-interaction-23-e-e75"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/introduction/-c6a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-introduction-8-a-3-fe4"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-introduction-8-a-3-c3d"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/kinematics-dynamics-e3d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-kinematics-dynamics-4-e-2-843"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-kinematics-dynamics-4-e-2-005"
   },
   "/hackathon-bookProject/docs/humanoid-robotics/manipulation-grasping-09a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-humanoid-robotics-manipulation-grasping-9-ec-935"
+    "content": "content---hackathon-book-project-docs-humanoid-robotics-manipulation-grasping-9-ec-719"
   },
   "/hackathon-bookProject/docs/intro-7ee": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
+    "content": "content---hackathon-book-project-docs-intro-0-e-3-96c"
   },
   "/hackathon-bookProject/docs/physical-ai/-bcd": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-physical-ai-6-d-7-880"
+    "content": "content---hackathon-book-project-docs-physical-ai-6-d-7-c59"
   },
   "/hackathon-bookProject/docs/physical-ai/conclusion/-ac7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-physical-ai-conclusion-5-e-1-394"
+    "content": "content---hackathon-book-project-docs-physical-ai-conclusion-5-e-1-dd7"
   },
   "/hackathon-bookProject/docs/physical-ai/core-principles/-ccf": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-physical-ai-core-principles-ca-5-313"
+    "content": "content---hackathon-book-project-docs-physical-ai-core-principles-ca-5-8e1"
   },
   "/hackathon-bookProject/docs/physical-ai/digital-to-physical-transition/-9f3": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-physical-ai-digital-to-physical-transition-09-a-74c"
+    "content": "content---hackathon-book-project-docs-physical-ai-digital-to-physical-transition-09-a-a1a"
   },
   "/hackathon-bookProject/docs/physical-ai/introduction/-a0a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-physical-ai-introduction-ec-2-ecd"
+    "content": "content---hackathon-book-project-docs-physical-ai-introduction-ec-2-6a2"
   },
   "/hackathon-bookProject/docs/ros2/-ad0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-a-96-4dc"
+    "content": "content---hackathon-book-project-docs-ros-2-a-96-c0b"
   },
   "/hackathon-bookProject/docs/ros2/communication-patterns/-965": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-communication-patterns-d-20-cd5"
+    "content": "content---hackathon-book-project-docs-ros-2-communication-patterns-d-20-e58"
   },
   "/hackathon-bookProject/docs/ros2/conclusion/-5ee": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-conclusion-7-ae-f9b"
+    "content": "content---hackathon-book-project-docs-ros-2-conclusion-7-ae-c0b"
   },
   "/hackathon-bookProject/docs/ros2/core-architecture/-986": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-core-architecture-5-f-5-5b2"
+    "content": "content---hackathon-book-project-docs-ros-2-core-architecture-5-f-5-c6b"
   },
   "/hackathon-bookProject/docs/ros2/introduction/-154": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-introduction-ecc-eef"
+    "content": "content---hackathon-book-project-docs-ros-2-introduction-ecc-82e"
   },
   "/hackathon-bookProject/docs/ros2/python-integration-rclpy/-05e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-python-integration-rclpy-a-27-58b"
+    "content": "content---hackathon-book-project-docs-ros-2-python-integration-rclpy-a-27-c44"
   },
   "/hackathon-bookProject/docs/ros2/urdf/-193": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-urdf-e-9-e-b30"
+    "content": "content---hackathon-book-project-docs-ros-2-urdf-e-9-e-e05"
   },
   "/hackathon-bookProject/docs/simulation/-18e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-simulation-798-e49"
+    "content": "content---hackathon-book-project-docs-simulation-798-92d"
   },
   "/hackathon-bookProject/docs/simulation/conclusion/-b18": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-simulation-conclusion-d-45-d73"
+    "content": "content---hackathon-book-project-docs-simulation-conclusion-d-45-8dd"
   },
   "/hackathon-bookProject/docs/simulation/introduction/-826": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-simulation-introduction-eda-c77"
+    "content": "content---hackathon-book-project-docs-simulation-introduction-eda-114"
   },
   "/hackathon-bookProject/docs/simulation/platforms/-547": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-simulation-platforms-1-a-7-455"
+    "content": "content---hackathon-book-project-docs-simulation-platforms-1-a-7-5da"
   },
   "/hackathon-bookProject/docs/simulation/sensor-simulation/-9ba": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-simulation-sensor-simulation-a-1-f-308"
+    "content": "content---hackathon-book-project-docs-simulation-sensor-simulation-a-1-f-b2a"
   },
   "/hackathon-bookProject/docs/vla/-723": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-vla-710-9ae"
+    "content": "content---hackathon-book-project-docs-vla-710-f36"
   },
   "/hackathon-bookProject/docs/vla/conclusion/-114": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-vla-conclusion-70-e-a58"
+    "content": "content---hackathon-book-project-docs-vla-conclusion-70-e-827"
   },
   "/hackathon-bookProject/docs/vla/introduction/-72b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-vla-introduction-280-0b8"
+    "content": "content---hackathon-book-project-docs-vla-introduction-280-4e8"
   },
   "/hackathon-bookProject/docs/vla/llm-role-2ed": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-vla-llm-role-79-f-edc"
+    "content": "content---hackathon-book-project-docs-vla-llm-role-79-f-829"
   },
   "/hackathon-bookProject/docs/vla/pipeline-c94": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-vla-pipeline-14-a-676"
+    "content": "content---hackathon-book-project-docs-vla-pipeline-14-a-ae5"
   },
   "/hackathon-bookProject/-be2": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---logina-74-fc3"
+      "plugin": "plugin---hackathon-book-project-logina-74-27d"
     },
-    "config": "config---login-5-e-9-d49"
+    "config": "config---hackathon-book-project-login-5-e-9-b9c"
   }
 }
